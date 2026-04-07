@@ -1,0 +1,20 @@
+# Railway Configuration
+# Создай два сервиса в Railway из этого репо:
+#
+# СЕРВИС 1 — API (ezcash-api):
+#   Build Command:  npm install -g pnpm@10 && pnpm install --no-frozen-lockfile && pnpm --filter @workspace/api-server run build
+#   Start Command:  node artifacts/api-server/dist/index.mjs
+#   Env vars:       OPENAI_API_KEY=<твой ключ>  NODE_ENV=production
+#
+# СЕРВИС 2 — Фронтенд (ezcash-show):
+#   Build Command:  npm install -g pnpm@10 && pnpm install --no-frozen-lockfile && pnpm --filter @workspace/ezcash-show run build
+#   Start Command:  node artifacts/ezcash-show/serve.mjs
+#   Env vars:       VITE_API_URL=<URL сервиса ezcash-api>  NODE_ENV=production
+#                   BASE_PATH=/  PORT=3000
+
+[build]
+builder = "nixpacks"
+
+[deploy]
+healthcheckPath = "/"
+restartPolicyType = "on_failure"

@@ -1,0 +1,13 @@
+{
+  "installCommand": "pnpm install --no-frozen-lockfile",
+  "buildCommand": "pnpm --filter @workspace/ezcash-show run build",
+  "framework": null,
+  "rewrites": [
+    { "source": "/:path*", "destination": "/index.html" }
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 30
+    }
+  }
+}
