@@ -2,6 +2,3 @@
   "files": [],
   "references": []
 }
-git add tsconfig.json
-git commit -m "fix: add root tsconfig for vercel build"
-git push
