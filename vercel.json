@@ -1,7 +1,7 @@
 {
   "installCommand": "pnpm install --no-frozen-lockfile",
-  "buildCommand": "cd apps/ezcash-show && pnpm run build",
-  "outputDirectory": "apps/ezcash-show/dist",
+  "buildCommand": "pnpm run build",
+  "outputDirectory": "dist",
   "framework": null,
   "rewrites": [
     {
